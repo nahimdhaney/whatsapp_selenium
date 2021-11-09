@@ -2,7 +2,7 @@
 
 - **WhatsappBot**
 
-   Bot que lee texto de un archivo .txt para luego ser enviado a un chat expecifico, para    ejecutarlo necesitarás realiar los siguientes pasos previos
+   Bot que lee texto de un archivo .txt para luego ser enviado a un chat expecifico, para    ejecutarlo necesitarás realizar los siguientes pasos previos
    
  1. Instalar selenium, si ejecutas el siguiente comando en la consola de tu sistema operativo se descargara automaticamente:
     >   pip install selenium
@@ -22,7 +22,8 @@
     Safari:
     https://webkit.org/blog/6900/webdriver-support-in-safari-10/
 
+ 1. Modifica el archivo contactos autorizados en *resources/contactos_autorizados*
+ 
 
-## StrageCode.md
-
-![](https://avatars.githubusercontent.com/u/79027421?s=200&v=4)
+ 1. run
+*py send_messages.py*

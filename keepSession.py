@@ -1,7 +1,12 @@
 from selenium import webdriver
 
 
-driver = webdriver.Edge(executable_path='./driver/edgedriver90')
+options = webdriver.ChromeOptions()
+options.binary_location = r"D:\Program Files\Google\Chrome\Application\chrome.exe"
+options.add_argument(
+    "C:\\Users\\nahim\\AppData\\Local\\Google\\Chrome\\User Data\\Default")
+driver = webdriver.Chrome(
+    executable_path=r'D:\nahim\chromedriver.exe', options=options)
 executor_url = driver.command_executor._url
 session_id = driver.session_id
 driver.get("https://web.whatsapp.com/")
@@ -27,7 +32,8 @@ def create_driver_session(session_id, executor_url):
 
     RemoteWebDriver.execute = new_command_execute
 
-    new_driver = webdriver.Remote(command_executor=executor_url, desired_capabilities={})
+    new_driver = webdriver.Remote(
+        command_executor=executor_url, desired_capabilities={})
     new_driver.session_id = session_id
 
     RemoteWebDriver.execute = org_command_execute
